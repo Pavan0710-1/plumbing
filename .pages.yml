@@ -1,0 +1,84 @@
+
+media:
+  - name: images
+    label: Website Images
+    input: media
+    output: /media
+
+content:
+  - name: website
+    label: Website Content
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - name: hero
+        label: Homepage Hero
+        type: object
+        fields:
+          - { name: eyebrow, label: Small Heading, type: string }
+          - { name: title, label: Main Heading, type: text }
+          - { name: description, label: Description, type: text }
+          - { name: button, label: Button Text, type: string }
+          - { name: image, label: Background Image URL, type: string }
+
+      - name: intro
+        label: Introduction
+        type: object
+        fields:
+          - { name: title, label: Heading, type: text }
+          - { name: description, label: Description, type: text }
+          - { name: image, label: Image URL, type: string }
+
+      - name: services
+        label: Services Section
+        type: object
+        fields:
+          - { name: title, label: Heading, type: text }
+          - { name: description, label: Description, type: text }
+          - name: items
+            label: Services
+            type: object
+            list: true
+            fields:
+              - { name: title, label: Service Name, type: string }
+              - { name: description, label: Description, type: text }
+              - { name: image, label: Image URL, type: string }
+
+      - name: projects
+        label: Projects Section
+        type: object
+        fields:
+          - { name: title, label: Heading, type: text }
+          - { name: description, label: Description, type: text }
+          - name: items
+            label: Projects
+            type: object
+            list: true
+            fields:
+              - { name: title, label: Project Name, type: string }
+              - { name: category, label: Category, type: string }
+              - { name: image, label: Image URL, type: string }
+
+      - name: about
+        label: About Section
+        type: object
+        fields:
+          - { name: title, label: Heading, type: text }
+          - { name: description, label: Description, type: text }
+          - { name: image, label: Image URL, type: string }
+
+      - name: contact
+        label: Contact Section
+        type: object
+        fields:
+          - { name: title, label: Heading, type: text }
+          - { name: description, label: Description, type: text }
+
+      - name: business
+        label: Business Details
+        type: object
+        fields:
+          - { name: email, label: Email Address, type: string }
+          - { name: phone, label: Phone Number, type: string }
+          - { name: location, label: Location, type: string }
