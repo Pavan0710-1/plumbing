@@ -1,0 +1,66 @@
+
+{
+  "hero": {
+    "eyebrow": "LANDSCAPE DESIGN · WESTERN SYDNEY",
+    "title": "Outdoor spaces.<br><em>Thoughtfully created.</em>",
+    "description": "We create beautiful, functional outdoor spaces designed around the way you live, relax and entertain.",
+    "button": "Start your project ↗",
+    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85"
+  },
+  "intro": {
+    "title": "Bring your outdoor vision <em>to life.</em>",
+    "description": "From the first idea to the final detail, we approach every outdoor space with care, creativity and attention to detail.",
+    "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=85"
+  },
+  "services": {
+    "title": "Spaces made for <em>living.</em>",
+    "description": "Thoughtful landscaping services that bring together design, practicality and lasting quality.",
+    "items": [
+      {
+        "title": "Landscape Design",
+        "description": "Thoughtful garden layouts and outdoor concepts designed around your space.",
+        "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=900&q=85"
+      },
+      {
+        "title": "Garden Construction",
+        "description": "Bring your outdoor vision to life with considered landscaping and planting.",
+        "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=85"
+      },
+      {
+        "title": "Outdoor Living",
+        "description": "Create welcoming spaces for relaxing, entertaining and everyday living.",
+        "image": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85"
+      }
+    ]
+  },
+  "projects": {
+    "title": "A closer look at <em>our work.</em>",
+    "description": "A selection of outdoor spaces and landscaping concepts.",
+    "items": [
+      {
+        "title": "Contemporary Retreat",
+        "category": "Outdoor Living",
+        "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85"
+      },
+      {
+        "title": "Garden Sanctuary",
+        "category": "Garden Design",
+        "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1200&q=85"
+      }
+    ]
+  },
+  "about": {
+    "title": "Designed with purpose. <em>Built to enjoy.</em>",
+    "description": "VERDANT is focused on creating outdoor environments that feel considered, welcoming and connected to their surroundings.",
+    "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1100&q=85"
+  },
+  "contact": {
+    "title": "Let's create something <em>special.</em>",
+    "description": "Have an outdoor project in mind? Tell us a little about it and we'll be in touch."
+  },
+  "business": {
+    "email": "hello@example.com",
+    "phone": "0400 000 000",
+    "location": "Western Sydney, NSW"
+  }
+}
