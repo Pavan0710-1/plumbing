@@ -1,244 +1,182 @@
 media:
-  - name: images
-    label: Website Images
-    input: media
-    output: /media
-    categories:
-      - image
-    extensions:
-      - jpg
-      - jpeg
-      - png
-      - webp
-    rename: safe
+  input: media
+  output: /media
+  rename: safe
+  categories:
+    - image
 
 content:
   - name: website
     label: Website Content
-    type: group
-    items:
-
+    type: file
+    path: content/site.json
+    format: json
+    fields:
       - name: business
         label: Business Details
-        type: file
-        path: content/site.json
-        format: json
+        type: object
         fields:
+          - name: name
+            label: Business Name
+            type: string
+          - name: phone
+            label: Phone Number
+            type: string
+          - name: email
+            label: Email Address
+            type: string
+          - name: location
+            label: Main Service Location
+            type: string
+          - name: topbar
+            label: Top Announcement
+            type: string
+          - name: hours
+            label: Opening Hours Text
+            type: string
 
-          - name: business
-            label: Business Information
-            type: object
-            fields:
-              - name: name
-                label: Business Name
-                type: string
+      - name: hero
+        label: Homepage Hero
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small Heading
+            type: string
+          - name: title
+            label: Main Heading
+            type: string
+          - name: description
+            label: Introduction
+            type: text
+          - name: button
+            label: Button Text
+            type: string
+          - name: note
+            label: Small Supporting Text
+            type: string
+          - name: tagTitle
+            label: Image Badge Heading
+            type: string
+          - name: tagText
+            label: Image Badge Text
+            type: string
+          - name: image
+            label: Main Hero Image
+            type: image
+            options:
+              path: images
 
-              - name: descriptor
-                label: Business Type
-                type: string
+      - name: servicesSection
+        label: Services Section Heading
+        type: object
+        fields:
+          - name: title
+            label: Section Heading
+            type: string
+          - name: description
+            label: Section Description
+            type: text
 
-              - name: phone
-                label: Phone Number
-                type: string
+      - name: services
+        label: Services
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: Service Name
+            type: string
+          - name: description
+            label: Service Description
+            type: text
+          - name: image
+            label: Service Image
+            type: image
+            options:
+              path: images
 
-              - name: email
-                label: Business Email
-                type: string
+      - name: about
+        label: About Section
+        type: object
+        fields:
+          - name: title
+            label: Heading
+            type: string
+          - name: description
+            label: Description
+            type: text
+          - name: image
+            label: Main Image
+            type: image
+            options:
+              path: images
+          - name: smallImage
+            label: Secondary Image
+            type: image
+            options:
+              path: images
 
-              - name: location
-                label: Main Service Location
-                type: string
+      - name: benefits
+        label: Business Benefits
+        type: string
+        list: true
 
-              - name: announcement
-                label: Top Announcement
-                type: string
+      - name: processSection
+        label: Process Section Heading
+        type: object
+        fields:
+          - name: title
+            label: Heading
+            type: string
+          - name: description
+            label: Description
+            type: text
 
-              - name: footerDescription
-                label: Footer Description
-                type: text
+      - name: process
+        label: How It Works Steps
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: Step Heading
+            type: string
+          - name: description
+            label: Step Description
+            type: text
 
-          - name: hero
-            label: Homepage
-            type: object
-            fields:
-              - name: eyebrow
-                label: Small Heading
-                type: string
+      - name: areasSection
+        label: Service Areas Heading
+        type: object
+        fields:
+          - name: title
+            label: Heading
+            type: string
+          - name: description
+            label: Description
+            type: text
 
-              - name: title
-                label: Main Heading
-                type: string
+      - name: areas
+        label: Service Areas
+        type: string
+        list: true
 
-              - name: highlight
-                label: Highlighted Heading
-                type: string
+      - name: contact
+        label: Contact Section
+        type: object
+        fields:
+          - name: title
+            label: Heading
+            type: string
+          - name: description
+            label: Description
+            type: text
 
-              - name: description
-                label: Homepage Description
-                type: text
-
-              - name: note
-                label: Short Supporting Text
-                type: string
-
-              - name: floatingTitle
-                label: Image Card Heading
-                type: string
-
-              - name: floatingText
-                label: Image Card Description
-                type: string
-
-              - name: image
-                label: Homepage Image
-                type: image
-                options:
-                  media: images
-                  path: /
-
-          - name: services
-            label: Services Section
-            type: object
-            fields:
-              - name: title
-                label: Services Heading
-                type: string
-
-              - name: description
-                label: Services Introduction
-                type: text
-
-              - name: items
-                label: Individual Services
-                type: object
-                list:
-                  min: 1
-                  max: 12
-                  collapsible:
-                    collapsed: true
-                    summary: "{title}"
-                fields:
-                  - name: icon
-                    label: Small Icon
-                    type: string
-
-                  - name: title
-                    label: Service Name
-                    type: string
-
-                  - name: description
-                    label: Service Description
-                    type: text
-
-          - name: about
-            label: About Section
-            type: object
-            fields:
-              - name: kicker
-                label: Small Heading
-                type: string
-
-              - name: title
-                label: Main Heading
-                type: string
-
-              - name: description
-                label: About Description
-                type: text
-
-              - name: image
-                label: About Image
-                type: image
-                options:
-                  media: images
-                  path: /
-
-              - name: imageTitle
-                label: Image Card Heading
-                type: string
-
-              - name: imageSubtitle
-                label: Image Card Description
-                type: string
-
-              - name: benefits
-                label: Business Benefits
-                type: object
-                list:
-                  min: 1
-                  max: 8
-                  collapsible:
-                    collapsed: true
-                    summary: "{text}"
-                fields:
-                  - name: text
-                    label: Benefit
-                    type: string
-
-          - name: areas
-            label: Service Areas
-            type: object
-            fields:
-              - name: title
-                label: Section Heading
-                type: string
-
-              - name: description
-                label: Section Description
-                type: text
-
-              - name: items
-                label: Suburbs
-                type: object
-                list:
-                  min: 1
-                  max: 30
-                  collapsible:
-                    collapsed: true
-                    summary: "{name}"
-                fields:
-                  - name: name
-                    label: Suburb Name
-                    type: string
-
-          - name: process
-            label: How It Works
-            type: object
-            fields:
-              - name: title
-                label: Section Heading
-                type: string
-
-              - name: description
-                label: Section Description
-                type: text
-
-              - name: items
-                label: Process Steps
-                type: object
-                list:
-                  min: 1
-                  max: 6
-                  collapsible:
-                    collapsed: true
-                    summary: "{title}"
-                fields:
-                  - name: title
-                    label: Step Heading
-                    type: string
-
-                  - name: description
-                    label: Step Description
-                    type: text
-
-          - name: contact
-            label: Contact Section
-            type: object
-            fields:
-              - name: title
-                label: Contact Heading
-                type: string
-
-              - name: description
-                label: Contact Description
-                type: text
+settings:
+  content: true
+  commit:
+    identity: user

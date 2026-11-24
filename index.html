@@ -3,1749 +3,530 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>AquaFlow Plumbing | Professional Plumbing Services</title>
-  <meta name="description" content="Professional plumbing services for residential and commercial properties across Western Sydney.">
-
+  <meta name="theme-color" content="#071b2c">
+  <meta name="description" content="AquaFlow Plumbing provides residential and commercial plumbing services across Western Sydney. Get in touch for an enquiry.">
+  <title>AquaFlow Plumbing | Western Sydney</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --navy: #10283c;
-      --navy-deep: #091c2c;
-      --blue: #087eaa;
-      --blue-bright: #12a6d5;
-      --aqua: #dff6fa;
-      --ink: #183044;
-      --muted: #71808c;
-      --white: #ffffff;
-      --soft: #f5f9fb;
-      --line: #e7edf0;
-      --radius: 18px;
-      --shadow: 0 18px 55px rgba(16, 40, 60, .09);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 90px;
-    }
-
-    body {
-      font-family: "DM Sans", sans-serif;
-      color: var(--ink);
-      background: white;
-      line-height: 1.65;
-      overflow-x: hidden;
-    }
-
-    body, button, a {
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button {
-      font: inherit;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .container {
-      width: min(1160px, calc(100% - 48px));
-      margin: auto;
-    }
-
-    .announcement {
-      background: var(--navy-deep);
-      color: #d9e9f1;
-      font-size: 12px;
-      letter-spacing: .035em;
-      padding: 9px 0;
-    }
-
-    .announcement-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .announcement a {
-      color: white;
-      font-weight: 700;
-    }
-
-    .navbar {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(255,255,255,.94);
-      backdrop-filter: blur(18px);
-      border-bottom: 1px solid rgba(20,50,70,.07);
-    }
-
-    .nav-inner {
-      min-height: 82px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 30px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 11px;
-      min-width: 190px;
-    }
-
-    .brand-mark {
-      width: 43px;
-      height: 43px;
-      display: grid;
-      place-items: center;
-      border-radius: 13px;
-      color: white;
-      background: linear-gradient(145deg, var(--blue-bright), var(--blue));
-      box-shadow: 0 8px 18px rgba(8,126,170,.2);
-    }
-
-    .brand-mark svg {
-      width: 25px;
-      height: 25px;
-    }
-
-    .brand-name {
-      font-family: Manrope, sans-serif;
-      font-size: 18px;
-      font-weight: 800;
-      line-height: 1.1;
-      letter-spacing: -.6px;
-      color: var(--navy);
-    }
-
-    .brand-name span {
-      display: block;
-      color: var(--blue);
-      font-size: 10px;
-      letter-spacing: 2.2px;
-      text-transform: uppercase;
-      margin-top: 4px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 32px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: #526575;
-      font-size: 13px;
-      font-weight: 700;
-      transition: color .25s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--blue);
-    }
-
-    .button {
-      min-height: 48px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 0 21px;
-      border-radius: 9px;
-      border: 1px solid transparent;
-      font-size: 13px;
-      font-weight: 700;
-      transition: transform .25s ease, background .25s ease, box-shadow .25s ease;
-      cursor: pointer;
-    }
-
-    .button:hover {
-      transform: translateY(-2px);
-    }
-
-    .button-primary {
-      color: white;
-      background: var(--blue);
-      box-shadow: 0 9px 20px rgba(8,126,170,.18);
-    }
-
-    .button-primary:hover {
-      background: #066c93;
-      box-shadow: 0 12px 25px rgba(8,126,170,.25);
-    }
-
-    .button-light {
-      background: white;
-      color: var(--navy);
-    }
-
-    .button-outline {
-      color: var(--navy);
-      border-color: #dce6eb;
-      background: white;
-    }
-
-    .menu-toggle {
-      display: none;
-      width: 44px;
-      height: 44px;
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      background: white;
-      color: var(--navy);
-      cursor: pointer;
-    }
-
-    .hero {
-      position: relative;
-      overflow: hidden;
-      color: white;
-      background:
-        radial-gradient(ellipse at 78% 20%, rgba(18,166,213,.23), transparent 38%),
-        linear-gradient(115deg, #0a2032 0%, #123b55 60%, #087eaa 130%);
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 560px;
-      height: 560px;
-      border: 1px solid rgba(255,255,255,.08);
-      border-radius: 50%;
-      right: -160px;
-      top: -220px;
-      box-shadow: 0 0 0 55px rgba(255,255,255,.025),
-                  0 0 0 110px rgba(255,255,255,.02);
-    }
-
-    .hero-inner {
-      position: relative;
-      z-index: 1;
-      min-height: 620px;
-      display: grid;
-      grid-template-columns: 1.05fr .95fr;
-      align-items: center;
-      gap: 55px;
-      padding-top: 65px;
-      padding-bottom: 75px;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      color: #74d8ef;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 23px;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 25px;
-      height: 2px;
-      background: currentColor;
-    }
-
-    .hero h1 {
-      max-width: 650px;
-      font-family: Manrope, sans-serif;
-      font-size: clamp(43px, 5.2vw, 68px);
-      line-height: 1.08;
-      letter-spacing: -3px;
-      font-weight: 800;
-      margin-bottom: 23px;
-    }
-
-    .hero h1 span {
-      color: #63d1ed;
-    }
-
-    .hero-copy {
-      max-width: 510px;
-      color: #c1d4df;
-      font-size: 16px;
-      line-height: 1.85;
-      margin-bottom: 32px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .hero-note {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-top: 38px;
-      color: #c4d8e3;
-      font-size: 12px;
-    }
-
-    .hero-note-mark {
-      width: 34px;
-      height: 34px;
-      display: grid;
-      place-items: center;
-      border: 1px solid rgba(255,255,255,.2);
-      border-radius: 50%;
-      color: #6bd4ee;
-    }
-
-    .hero-visual {
-      min-height: 420px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .hero-image-wrap {
-      position: relative;
-      width: 100%;
-      height: 410px;
-      border-radius: 22px;
-      overflow: hidden;
-      background:
-        linear-gradient(145deg, rgba(18,166,213,.25), rgba(5,25,40,.15)),
-        linear-gradient(135deg, #315f76, #102b40);
-      box-shadow: 0 30px 70px rgba(0,0,0,.22);
-    }
-
-    .hero-image-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .hero-image-wrap::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(0deg, rgba(7,27,42,.35), transparent 60%);
-      pointer-events: none;
-    }
-
-    .hero-floating {
-      position: absolute;
-      z-index: 2;
-      left: -28px;
-      bottom: 30px;
-      max-width: 225px;
-      padding: 19px;
-      border-radius: 13px;
-      background: white;
-      color: var(--navy);
-      box-shadow: var(--shadow);
-    }
-
-    .hero-floating strong {
-      display: block;
-      font-family: Manrope, sans-serif;
-      font-size: 14px;
-      margin-bottom: 4px;
-    }
-
-    .hero-floating span {
-      color: var(--muted);
-      font-size: 11px;
-    }
-
-    .floating-icon {
-      width: 34px;
-      height: 34px;
-      display: grid;
-      place-items: center;
-      margin-bottom: 12px;
-      border-radius: 9px;
-      color: var(--blue);
-      background: var(--aqua);
-    }
-
-    .trust-strip {
-      position: relative;
-      z-index: 3;
-      margin-top: -1px;
-      background: white;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .trust-inner {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      padding: 25px 0;
-    }
-
-    .trust-item {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 12px;
-      padding: 4px 20px;
-      border-right: 1px solid var(--line);
-    }
-
-    .trust-item:last-child {
-      border: 0;
-    }
-
-    .trust-icon {
-      color: var(--blue);
-      font-size: 21px;
-    }
-
-    .trust-item strong {
-      display: block;
-      font-size: 12px;
-      color: var(--navy);
-    }
-
-    .trust-item span {
-      display: block;
-      color: var(--muted);
-      font-size: 10px;
-    }
-
-    section {
-      padding: 105px 0;
-    }
-
-    .section-heading {
-      max-width: 650px;
-      margin-bottom: 48px;
-    }
-
-    .section-kicker {
-      color: var(--blue);
-      font-size: 11px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 13px;
-    }
-
-    .section-heading h2 {
-      font-family: Manrope, sans-serif;
-      color: var(--navy);
-      font-size: clamp(31px, 4vw, 45px);
-      line-height: 1.2;
-      letter-spacing: -1.7px;
-      margin-bottom: 15px;
-    }
-
-    .section-heading p {
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.85;
-    }
-
-    .services-section {
-      background: var(--soft);
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 19px;
-    }
-
-    .service-card {
-      min-height: 245px;
-      padding: 29px;
-      border: 1px solid #e8eff2;
-      border-radius: 14px;
-      background: white;
-      transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-7px);
-      border-color: #c9e8f0;
-      box-shadow: var(--shadow);
-    }
-
-    .service-icon {
-      width: 48px;
-      height: 48px;
-      display: grid;
-      place-items: center;
-      border-radius: 12px;
-      background: var(--aqua);
-      color: var(--blue);
-      font-size: 23px;
-      margin-bottom: 22px;
-    }
-
-    .service-card h3 {
-      font-family: Manrope, sans-serif;
-      font-size: 17px;
-      color: var(--navy);
-      margin-bottom: 9px;
-    }
-
-    .service-card p {
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.8;
-    }
-
-    .service-number {
-      display: block;
-      color: #b4c5ce;
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      margin-top: 23px;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 75px;
-    }
-
-    .about-visual {
-      min-height: 450px;
-      position: relative;
-      border-radius: 18px;
-      overflow: hidden;
-      background:
-        linear-gradient(145deg, rgba(8,126,170,.12), rgba(9,28,44,.08)),
-        linear-gradient(135deg, #d8eef2, #9bc9d4);
-    }
-
-    .about-visual img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .about-tag {
-      position: absolute;
-      bottom: 22px;
-      left: 22px;
-      right: 22px;
-      padding: 17px 20px;
-      border-radius: 11px;
-      color: white;
-      background: rgba(9,28,44,.88);
-      backdrop-filter: blur(10px);
-    }
-
-    .about-tag strong {
-      display: block;
-      font-family: Manrope, sans-serif;
-      font-size: 14px;
-    }
-
-    .about-tag span {
-      color: #c5d9e2;
-      font-size: 11px;
-    }
-
-    .about-copy h2 {
-      font-family: Manrope, sans-serif;
-      color: var(--navy);
-      font-size: clamp(32px, 4vw, 43px);
-      line-height: 1.2;
-      letter-spacing: -1.7px;
-      margin-bottom: 20px;
-    }
-
-    .about-copy > p {
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.9;
-      margin-bottom: 25px;
-    }
-
-    .benefit-list {
-      list-style: none;
-      display: grid;
-      gap: 15px;
-      margin-bottom: 30px;
-    }
-
-    .benefit-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      color: #41596a;
-      font-size: 13px;
-    }
-
-    .check {
-      width: 21px;
-      height: 21px;
-      flex: 0 0 21px;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      background: var(--aqua);
-      color: var(--blue);
-      font-size: 12px;
-      font-weight: 800;
-    }
-
-    .areas-section {
-      background: var(--navy);
-      color: white;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .areas-section::after {
-      content: "";
-      position: absolute;
-      width: 500px;
-      height: 500px;
-      border: 1px solid rgba(255,255,255,.08);
-      border-radius: 50%;
-      right: -180px;
-      bottom: -300px;
-      box-shadow: 0 0 0 60px rgba(255,255,255,.025);
-    }
-
-    .areas-inner {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      align-items: center;
-      gap: 65px;
-    }
-
-    .areas-section .section-kicker {
-      color: #69d5ef;
-    }
-
-    .areas-section h2 {
-      font-family: Manrope, sans-serif;
-      font-size: clamp(32px, 4vw, 43px);
-      line-height: 1.2;
-      letter-spacing: -1.5px;
-      margin-bottom: 17px;
-    }
-
-    .areas-section p {
-      color: #bdced9;
-      font-size: 13px;
-      line-height: 1.9;
-    }
-
-    .areas-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 11px;
-    }
-
-    .area-pill {
-      padding: 12px 17px;
-      border: 1px solid rgba(255,255,255,.15);
-      border-radius: 8px;
-      color: #e4f1f5;
-      background: rgba(255,255,255,.045);
-      font-size: 12px;
-      transition: background .2s ease, border-color .2s ease;
-    }
-
-    .area-pill:hover {
-      background: rgba(18,166,213,.17);
-      border-color: rgba(105,213,239,.5);
-    }
-
-    .process-section {
-      background: var(--soft);
-    }
-
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-
-    .process-card {
-      padding: 28px;
-      border-radius: 13px;
-      background: white;
-      border: 1px solid var(--line);
-    }
-
-    .process-number {
-      color: #a8dce8;
-      font-family: Manrope, sans-serif;
-      font-size: 37px;
-      font-weight: 800;
-      margin-bottom: 15px;
-    }
-
-    .process-card h3 {
-      color: var(--navy);
-      font-family: Manrope, sans-serif;
-      font-size: 16px;
-      margin-bottom: 9px;
-    }
-
-    .process-card p {
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.8;
-    }
-
-    .contact-section {
-      background: white;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: .85fr 1.15fr;
-      gap: 70px;
-      align-items: start;
-    }
-
-    .contact-copy h2 {
-      font-family: Manrope, sans-serif;
-      color: var(--navy);
-      font-size: clamp(32px, 4vw, 43px);
-      line-height: 1.2;
-      letter-spacing: -1.5px;
-      margin-bottom: 17px;
-    }
-
-    .contact-copy > p {
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.9;
-      margin-bottom: 28px;
-    }
-
-    .contact-detail {
-      display: flex;
-      gap: 13px;
-      align-items: center;
-      margin-top: 19px;
-    }
-
-    .contact-detail-icon {
-      width: 43px;
-      height: 43px;
-      display: grid;
-      place-items: center;
-      border-radius: 10px;
-      color: var(--blue);
-      background: var(--aqua);
-    }
-
-    .contact-detail strong {
-      display: block;
-      color: var(--navy);
-      font-size: 12px;
-    }
-
-    .contact-detail span,
-    .contact-detail a {
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    .contact-form {
-      padding: 35px;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      background: white;
-      box-shadow: var(--shadow);
-    }
-
-    .contact-form h3 {
-      color: var(--navy);
-      font-family: Manrope, sans-serif;
-      font-size: 20px;
-      margin-bottom: 6px;
-    }
-
-    .form-subtitle {
-      color: var(--muted);
-      font-size: 12px;
-      margin-bottom: 25px;
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
-
-    .form-group {
-      margin-bottom: 15px;
-    }
-
-    .form-group label {
-      display: block;
-      color: #425969;
-      font-size: 11px;
-      font-weight: 700;
-      margin-bottom: 7px;
-    }
-
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-      width: 100%;
-      padding: 13px 14px;
-      border: 1px solid #e1e9ed;
-      border-radius: 8px;
-      outline: none;
-      background: #fbfdfe;
-      color: var(--ink);
-      font: inherit;
-      font-size: 12px;
-      transition: border-color .2s ease, box-shadow .2s ease;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus,
-    .form-group select:focus {
-      border-color: var(--blue-bright);
-      box-shadow: 0 0 0 3px rgba(18,166,213,.1);
-    }
-
-    .form-group textarea {
-      min-height: 110px;
-      resize: vertical;
-    }
-
-    .contact-form .button {
-      width: 100%;
-      border: 0;
-    }
-
-    .form-message {
-      margin-top: 12px;
-      color: var(--muted);
-      font-size: 11px;
-    }
-
-    .footer {
-      padding: 65px 0 25px;
-      background: var(--navy-deep);
-      color: white;
-    }
-
-    .footer-main {
-      display: grid;
-      grid-template-columns: 1.3fr .7fr .7fr;
-      gap: 55px;
-      padding-bottom: 45px;
-    }
-
-    .footer .brand-name {
-      color: white;
-    }
-
-    .footer-description {
-      max-width: 340px;
-      margin-top: 19px;
-      color: #a9bdca;
-      font-size: 12px;
-      line-height: 1.9;
-    }
-
-    .footer-column h4 {
-      margin-bottom: 17px;
-      font-family: Manrope, sans-serif;
-      font-size: 13px;
-    }
-
-    .footer-column a {
-      display: block;
-      margin: 10px 0;
-      color: #a9bdca;
-      font-size: 12px;
-      transition: color .2s ease;
-    }
-
-    .footer-column a:hover {
-      color: #68d3ed;
-    }
-
-    .footer-bottom {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      padding-top: 22px;
-      border-top: 1px solid rgba(255,255,255,.12);
-      color: #8299a8;
-      font-size: 10px;
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(22px);
-      transition: opacity .75s ease, transform .75s cubic-bezier(.2,.7,.2,1);
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    @media (max-width: 900px) {
-      .nav-links {
-        gap: 17px;
-      }
-
-      .nav-inner > .button {
-        display: none;
-      }
-
-      .hero-inner {
-        gap: 30px;
-      }
-
-      .hero h1 {
-        font-size: 52px;
-      }
-
-      .about-grid,
-      .areas-inner,
-      .contact-grid {
-        gap: 40px;
-      }
-    }
-
-    @media (max-width: 700px) {
-      .container {
-        width: min(100% - 34px, 560px);
-      }
-
-      .announcement-inner {
-        justify-content: center;
-        text-align: center;
-      }
-
-      .announcement-inner span:last-child {
-        display: none;
-      }
-
-      .nav-inner {
-        min-height: 70px;
-      }
-
-      .menu-toggle {
-        display: grid;
-        place-items: center;
-      }
-
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        padding: 18px 25px 24px;
-        background: white;
-        border-bottom: 1px solid var(--line);
-        box-shadow: 0 18px 25px rgba(16,40,60,.08);
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-      }
-
-      .nav-links.open {
-        display: flex;
-      }
-
-      .nav-links li a {
-        display: block;
-        padding: 12px 0;
-      }
-
-      .hero-inner {
-        grid-template-columns: 1fr;
-        padding-top: 65px;
-        padding-bottom: 65px;
-      }
-
-      .hero h1 {
-        font-size: clamp(42px, 12vw, 58px);
-        letter-spacing: -2.5px;
-      }
-
-      .hero-copy {
-        font-size: 14px;
-      }
-
-      .hero-visual {
-        min-height: 300px;
-        margin: 10px 0 0 12px;
-      }
-
-      .hero-image-wrap {
-        height: 300px;
-      }
-
-      .hero-floating {
-        left: -12px;
-        bottom: 16px;
-      }
-
-      .trust-inner {
-        grid-template-columns: 1fr;
-        gap: 18px;
-        padding: 25px 0;
-      }
-
-      .trust-item {
-        justify-content: flex-start;
-        border: 0;
-        padding: 0;
-      }
-
-      section {
-        padding: 75px 0;
-      }
-
-      .section-heading {
-        margin-bottom: 32px;
-      }
-
-      .services-grid,
-      .process-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .service-card {
-        min-height: auto;
-      }
-
-      .about-grid,
-      .areas-inner,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .about-visual {
-        min-height: 340px;
-      }
-
-      .areas-inner {
-        gap: 30px;
-      }
-
-      .contact-form {
-        padding: 24px 19px;
-      }
-
-      .form-row {
-        grid-template-columns: 1fr;
-        gap: 0;
-      }
-
-      .footer-main {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-      }
-
-      .footer-brand-column {
-        grid-column: 1 / -1;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-      }
-    }
-
+      --navy: #071b2c;
+      --navy2: #0d2a40;
+      --blue: #087fe8;
+      --cyan: #36c5e9;
+      --ink: #102638;
+      --muted: #6d7f8e;
+      --pale: #f2f7fa;
+      --white: #fff;
+      --line: #e3ebf0;
+      --radius: 22px;
+      --shadow: 0 18px 55px rgba(9, 36, 57, .10);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body { font-family: "DM Sans", sans-serif; color: var(--ink); background: #fff; line-height: 1.65; overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; width: 100%; object-fit: cover; }
+    button { font: inherit; }
+    .container { width: min(1160px, calc(100% - 48px)); margin: auto; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--blue); font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; }
+    .eyebrow:before { content: ""; width: 23px; height: 2px; background: var(--cyan); }
+    .section-head { max-width: 650px; margin-bottom: 42px; }
+    .section-head h2 { font: 800 clamp(32px, 4vw, 49px)/1.12 Manrope, sans-serif; letter-spacing: -2px; margin: 15px 0; color: var(--navy); }
+    .section-head p { color: var(--muted); font-size: 16px; max-width: 570px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 12px; border: 0; border-radius: 8px; padding: 15px 22px; font-weight: 800; font-size: 13px; transition: .25s ease; cursor: pointer; }
+    .btn-primary { background: var(--blue); color: white; box-shadow: 0 10px 25px rgba(8,127,232,.22); }
+    .btn-primary:hover { background: #006bc8; transform: translateY(-3px); box-shadow: 0 15px 30px rgba(8,127,232,.3); }
+    .btn-light { background: white; color: var(--navy); }
+    .btn-light:hover { transform: translateY(-3px); background: #eaf7ff; }
+    .arrow { font-size: 18px; line-height: 1; }
+
+    /* Navigation */
+    .topbar { background: #041321; color: #c7d5df; font-size: 11px; letter-spacing: .3px; }
+    .topbar-inner { min-height: 37px; display: flex; justify-content: space-between; align-items: center; gap: 15px; }
+    .topbar-right { display: flex; gap: 22px; }
+    .navbar { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.96); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(10,40,60,.07); }
+    .nav-inner { height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+    .brand { display: flex; align-items: center; gap: 11px; flex-shrink: 0; }
+    .brand-mark { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; color: white; font-size: 23px; font-weight: 800; background: linear-gradient(145deg, #19bce5, #0875d7); box-shadow: 0 8px 18px rgba(8,127,232,.2); }
+    .brand-name { font: 800 17px Manrope, sans-serif; letter-spacing: -.6px; color: var(--navy); line-height: 1.1; }
+    .brand-name span { color: var(--blue); }
+    .brand-sub { display: block; margin-top: 4px; font-size: 9px; letter-spacing: 2px; color: #8293a0; font-weight: 800; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 30px; }
+    .nav-links a { font-size: 12px; color: #455968; font-weight: 700; transition: color .2s; }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-cta { display: flex; align-items: center; gap: 18px; }
+    .nav-phone { font-size: 12px; font-weight: 800; color: var(--navy); white-space: nowrap; }
+    .menu-toggle { display: none; border: 0; background: transparent; color: var(--navy); font-size: 27px; cursor: pointer; }
+
+    /* Hero */
+    .hero { background: var(--navy); position: relative; overflow: hidden; color: white; }
+    .hero:before { content: ""; position: absolute; width: 600px; height: 600px; border-radius: 50%; right: -190px; top: -270px; background: radial-gradient(circle, rgba(23,159,226,.24), transparent 68%); }
+    .hero-grid { min-height: 625px; display: grid; grid-template-columns: 1.02fr .98fr; align-items: center; gap: 55px; padding-top: 58px; padding-bottom: 70px; position: relative; z-index: 1; }
+    .hero-copy { padding: 20px 0; }
+    .hero .eyebrow { color: #70d9f2; }
+    .hero h1 { font: 800 clamp(43px, 5.7vw, 70px)/1.04 Manrope, sans-serif; letter-spacing: -3.8px; margin: 23px 0; max-width: 620px; }
+    .hero h1 span { color: #43c8ed; }
+    .hero-copy > p { color: #b6c8d5; font-size: 16px; line-height: 1.85; max-width: 490px; }
+    .hero-actions { display: flex; align-items: center; gap: 13px; flex-wrap: wrap; margin-top: 32px; }
+    .hero-note { display: flex; align-items: center; gap: 10px; margin-top: 34px; color: #a9bdca; font-size: 11px; font-weight: 600; }
+    .hero-note span { width: 7px; height: 7px; background: #42d5b0; border-radius: 50%; box-shadow: 0 0 0 5px rgba(66,213,176,.12); }
+    .hero-visual { position: relative; min-height: 470px; }
+    .hero-photo { position: absolute; inset: 0 0 0 15px; border-radius: 18px; overflow: hidden; background: linear-gradient(135deg,#174d69,#0b2437); }
+    .hero-photo img { height: 100%; min-height: 470px; opacity: .9; }
+    .hero-photo:after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg,rgba(7,27,44,.12),transparent 55%), linear-gradient(0deg,rgba(7,27,44,.35),transparent 60%); pointer-events: none; }
+    .hero-tag { position: absolute; left: -15px; bottom: 35px; z-index: 2; background: white; color: var(--navy); padding: 17px 21px; border-radius: 12px; box-shadow: var(--shadow); display: flex; align-items: center; gap: 13px; }
+    .hero-tag-icon { width: 42px; height: 42px; border-radius: 10px; display: grid; place-items: center; background: #e7f6ff; color: var(--blue); font-size: 22px; }
+    .hero-tag strong { display: block; font: 800 14px Manrope; }
+    .hero-tag small { color: var(--muted); font-size: 10px; }
+    .hero-outline { position: absolute; width: 100px; height: 100px; right: -23px; top: -24px; border: 1px solid rgba(77,197,235,.4); border-radius: 16px; }
+
+    /* Trust strip */
+    .trust { background: #f5f9fb; border-bottom: 1px solid var(--line); }
+    .trust-grid { display: grid; grid-template-columns: repeat(4,1fr); padding: 24px 0; }
+    .trust-item { display: flex; align-items: center; justify-content: center; gap: 12px; padding: 5px 15px; border-right: 1px solid #dce7ed; }
+    .trust-item:last-child { border: 0; }
+    .trust-icon { color: var(--blue); font-size: 23px; }
+    .trust-item strong { display: block; font-size: 12px; color: var(--navy); }
+    .trust-item small { display: block; font-size: 10px; color: #8293a0; }
+
+    /* Services */
+    .services { padding: 108px 0; }
+    .services-top { display: flex; align-items: end; justify-content: space-between; gap: 25px; }
+    .services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+    .service-card { border: 1px solid var(--line); border-radius: 15px; overflow: hidden; background: white; transition: .3s ease; }
+    .service-card:hover { transform: translateY(-7px); box-shadow: var(--shadow); border-color: transparent; }
+    .service-image { height: 205px; background: linear-gradient(135deg,#dbeaf2,#a8d6e8); overflow: hidden; }
+    .service-image img { height: 100%; transition: transform .5s ease; }
+    .service-card:hover .service-image img { transform: scale(1.06); }
+    .service-content { padding: 24px; }
+    .service-number { color: #93a6b3; font-size: 10px; letter-spacing: 1.5px; font-weight: 800; }
+    .service-content h3 { font: 800 19px Manrope; margin: 8px 0; color: var(--navy); }
+    .service-content p { color: var(--muted); font-size: 13px; line-height: 1.75; min-height: 68px; }
+    .service-link { display: inline-flex; gap: 8px; align-items: center; color: var(--blue); font-size: 11px; font-weight: 800; margin-top: 18px; }
+
+    /* About */
+    .about { background: var(--pale); padding: 105px 0; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 85px; }
+    .about-visual { position: relative; padding: 0 35px 35px 0; }
+    .about-main { height: 475px; border-radius: 16px; overflow: hidden; background: linear-gradient(135deg,#bdd5e1,#6e9fb7); }
+    .about-main img { height: 100%; }
+    .about-small { position: absolute; right: 0; bottom: 0; width: 47%; height: 190px; border: 8px solid var(--pale); border-radius: 15px; overflow: hidden; background: #d5e8f0; }
+    .about-small img { height: 100%; }
+    .about-content h2 { font: 800 clamp(32px,4vw,48px)/1.12 Manrope; letter-spacing: -2px; margin: 15px 0 20px; color: var(--navy); }
+    .about-content > p { color: var(--muted); font-size: 15px; line-height: 1.9; }
+    .benefit-list { display: grid; grid-template-columns: 1fr 1fr; gap: 17px 20px; margin: 28px 0 32px; }
+    .benefit { display: flex; gap: 10px; align-items: flex-start; font-size: 12px; font-weight: 800; color: #344c5c; }
+    .check { display: grid; place-items: center; flex: 0 0 22px; width: 22px; height: 22px; border-radius: 50%; background: #d9f3ec; color: #159b76; font-size: 12px; }
+
+    /* Process */
+    .process { padding: 105px 0; }
+    .process-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; }
+    .process-card { padding: 27px 23px; border: 1px solid var(--line); border-radius: 14px; position: relative; }
+    .process-card:before { content: ""; position: absolute; top: 0; left: 23px; width: 35px; height: 3px; background: var(--cyan); }
+    .process-no { color: #b6c7d1; font: 800 35px Manrope; }
+    .process-card h3 { color: var(--navy); font: 800 16px Manrope; margin: 12px 0 8px; }
+    .process-card p { color: var(--muted); font-size: 12px; line-height: 1.8; }
+
+    /* Areas */
+    .areas { background: var(--navy); color: white; padding: 75px 0; position: relative; overflow: hidden; }
+    .areas:after { content: ""; position: absolute; right: -130px; top: -250px; width: 550px; height: 550px; border-radius: 50%; border: 1px solid rgba(67,200,237,.2); box-shadow: 0 0 0 45px rgba(67,200,237,.035),0 0 0 90px rgba(67,200,237,.025); }
+    .areas-inner { position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: center; gap: 50px; }
+    .areas h2 { font: 800 clamp(30px,4vw,43px)/1.15 Manrope; letter-spacing: -1.8px; margin: 13px 0; }
+    .areas p { color: #a9bdca; font-size: 14px; max-width: 490px; }
+    .area-pills { display: flex; flex-wrap: wrap; gap: 10px; max-width: 450px; justify-content: flex-end; }
+    .area-pill { border: 1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.06); color: #e5f1f7; padding: 10px 15px; border-radius: 6px; font-size: 11px; font-weight: 700; }
+
+    /* Contact */
+    .contact { padding: 105px 0; background: #f6f9fb; }
+    .contact-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 65px; align-items: start; }
+    .contact-copy h2 { font: 800 clamp(34px,4vw,49px)/1.1 Manrope; letter-spacing: -2px; color: var(--navy); margin: 15px 0; }
+    .contact-copy > p { color: var(--muted); font-size: 14px; line-height: 1.85; }
+    .contact-detail { display: flex; align-items: center; gap: 14px; margin-top: 26px; }
+    .contact-icon { width: 43px; height: 43px; display: grid; place-items: center; border-radius: 11px; background: #e2f3fc; color: var(--blue); font-size: 19px; }
+    .contact-detail small { display: block; color: #8596a2; font-size: 10px; font-weight: 700; }
+    .contact-detail strong { color: var(--navy); font-size: 13px; }
+    .contact-form { background: white; border: 1px solid var(--line); border-radius: 16px; padding: 34px; box-shadow: 0 12px 40px rgba(9,36,57,.05); }
+    .contact-form h3 { font: 800 23px Manrope; color: var(--navy); margin-bottom: 6px; }
+    .contact-form > p { color: var(--muted); font-size: 12px; margin-bottom: 24px; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    .field { display: flex; flex-direction: column; gap: 7px; }
+    .field.full { grid-column: 1/-1; }
+    .field label { font-size: 10px; font-weight: 800; color: #455b69; }
+    .field input,.field textarea,.field select { width: 100%; border: 1px solid #dfe8ed; background: #fbfdfe; border-radius: 7px; padding: 13px 14px; font: 13px "DM Sans"; color: var(--ink); outline: none; transition: border .2s; }
+    .field input:focus,.field textarea:focus,.field select:focus { border-color: var(--blue); }
+    .field textarea { resize: vertical; min-height: 105px; }
+    .form-submit { margin-top: 18px; width: 100%; }
+    .form-note { color: #8a9aa5; font-size: 10px; margin-top: 12px; }
+
+    /* Footer */
+    footer { background: #041321; color: #a7bac7; padding: 55px 0 22px; }
+    .footer-top { display: flex; justify-content: space-between; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.1); }
+    .footer-brand .brand-name { color: white; }
+    .footer-brand p { max-width: 330px; font-size: 12px; line-height: 1.8; margin-top: 17px; color: #8ea3b2; }
+    .footer-links { display: flex; gap: 65px; }
+    .footer-col strong { display: block; color: white; font-size: 11px; margin-bottom: 15px; }
+    .footer-col a { display: block; font-size: 11px; margin: 9px 0; color: #91a6b5; }
+    .footer-col a:hover { color: #54c8eb; }
+    .footer-bottom { display: flex; justify-content: space-between; gap: 20px; padding-top: 20px; font-size: 10px; color: #6f8797; }
+
+    /* Motion */
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
     @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      *, *::before, *::after {
-        animation-duration: .01ms !important;
-        transition-duration: .01ms !important;
-      }
-
-      .reveal {
-        opacity: 1;
-        transform: none;
-      }
+      *, *:before, *:after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+    @media (max-width: 950px) {
+      .nav-links { gap: 17px; }
+      .nav-phone { display: none; }
+      .hero-grid { gap: 30px; }
+      .about-grid { gap: 45px; }
+      .contact-grid { gap: 35px; }
+    }
+    @media (max-width: 760px) {
+      .container { width: min(100% - 34px, 560px); }
+      .topbar-inner { justify-content: center; }
+      .topbar-right { display: none; }
+      .nav-inner { height: 70px; }
+      .menu-toggle { display: block; }
+      .nav-cta .btn { display: none; }
+      .nav-links { display: none; position: absolute; left: 0; right: 0; top: 70px; padding: 20px 25px 25px; background: white; border-bottom: 1px solid var(--line); flex-direction: column; align-items: stretch; gap: 0; box-shadow: 0 20px 30px rgba(9,36,57,.08); }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 13px 0; border-bottom: 1px solid #edf2f5; }
+      .hero-grid { grid-template-columns: 1fr; padding-top: 45px; gap: 35px; }
+      .hero h1 { letter-spacing: -2.6px; }
+      .hero-visual { min-height: 330px; }
+      .hero-photo { inset: 0 0 0 10px; }
+      .hero-photo img { min-height: 330px; }
+      .hero-tag { left: -5px; bottom: 18px; }
+      .trust-grid { grid-template-columns: 1fr 1fr; gap: 18px 0; }
+      .trust-item:nth-child(2) { border-right: 0; }
+      .services,.about,.process,.contact { padding: 75px 0; }
+      .services-top { display: block; }
+      .services-top .btn { margin: -15px 0 30px; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .service-image { height: 155px; }
+      .service-content { padding: 18px; }
+      .service-content h3 { font-size: 16px; }
+      .service-content p { font-size: 12px; }
+      .about-grid { grid-template-columns: 1fr; gap: 38px; }
+      .about-visual { max-width: 520px; }
+      .about-main { height: 370px; }
+      .process-grid { grid-template-columns: 1fr 1fr; }
+      .areas-inner { display: block; }
+      .area-pills { justify-content: flex-start; margin-top: 28px; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-top { flex-direction: column; }
+      .footer-links { gap: 45px; }
+    }
+    @media (max-width: 470px) {
+      .hero h1 { font-size: 43px; }
+      .hero-copy > p { font-size: 14px; }
+      .hero-actions .btn { width: 100%; }
+      .services-grid { grid-template-columns: 1fr; }
+      .service-image { height: 205px; }
+      .process-grid { grid-template-columns: 1fr; }
+      .benefit-list { grid-template-columns: 1fr; }
+      .form-grid { grid-template-columns: 1fr; }
+      .field.full { grid-column: auto; }
+      .contact-form { padding: 23px; }
+      .footer-links { gap: 30px; }
+      .footer-bottom { flex-direction: column; }
     }
   </style>
 </head>
-
 <body>
-
-  <div class="announcement">
-    <div class="container announcement-inner">
-      <span id="announcementText">Reliable plumbing support across Western Sydney</span>
-      <span>Call us: <a id="topPhone" href="tel:0400000000">0400 000 000</a></span>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span id="topbar-message">Professional plumbing across Western Sydney</span>
+      <div class="topbar-right">
+        <span id="topbar-hours">Enquiries welcome</span>
+        <span id="topbar-area">Western Sydney, NSW</span>
+      </div>
     </div>
   </div>
 
   <header class="navbar">
     <div class="container nav-inner">
-
-      <a class="brand" href="#home" aria-label="AquaFlow Plumbing home">
-        <div class="brand-mark">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <path d="M12 2.5C9.5 6.3 5.8 10.1 5.8 14.5a6.2 6.2 0 0 0 12.4 0c0-4.4-3.7-8.2-6.2-12Z"/>
-            <path d="M9.3 15.1a2.9 2.9 0 0 0 2.9 2.9"/>
-          </svg>
-        </div>
-        <div class="brand-name">
-          <span id="brandName">AquaFlow</span>
-          <span id="brandDescriptor">Plumbing Services</span>
-        </div>
+      <a class="brand" href="#home" aria-label="AquaFlow home">
+        <div class="brand-mark">A</div>
+        <div><div class="brand-name" id="brand-name">Aqua<span>Flow</span></div><span class="brand-sub">Plumbing services</span></div>
       </a>
-
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#areas">Service Areas</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-
-      <a class="button button-primary" id="navCall" href="tel:0400000000">Get in touch ↗</a>
-
-      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
-        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M4 7h16M4 12h16M4 17h16"/>
-        </svg>
-      </button>
+      <nav class="nav-links" id="nav-links">
+        <a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#areas">Service areas</a><a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="nav-phone" id="nav-phone" href="tel:0400000000">0400 000 000</a>
+        <a class="btn btn-primary" href="#contact">Request a quote <span class="arrow">↗</span></a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">☰</button>
+      </div>
     </div>
   </header>
 
   <main>
-
     <section class="hero" id="home">
-      <div class="container hero-inner">
-
-        <div class="hero-content reveal">
-          <div class="eyebrow" id="heroEyebrow">Your local plumbing specialists</div>
-
-          <h1 id="heroTitle">
-            Plumbing done right. <span>Every time.</span>
-          </h1>
-
-          <p class="hero-copy" id="heroDescription">
-            From everyday plumbing repairs to larger installations, get dependable service and practical solutions for your home or business.
-          </p>
-
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow" id="hero-eyebrow">Your local plumbing team</span>
+          <h1 id="hero-title">Plumbing done right.<br><span>Every time.</span></h1>
+          <p id="hero-description">Dependable plumbing solutions for homes and businesses. From everyday repairs to bigger installations, get in touch with a team that puts quality first.</p>
           <div class="hero-actions">
-            <a class="button button-light" href="#contact">Request an enquiry ↗</a>
-            <a class="button button-outline" id="heroPhone" href="tel:0400000000">0400 000 000</a>
+            <a class="btn btn-primary" href="#contact" id="hero-button">Get a free quote <span class="arrow">↗</span></a>
+            <a class="btn btn-light" id="hero-phone-button" href="tel:0400000000">Call our team</a>
           </div>
-
-          <div class="hero-note">
-            <div class="hero-note-mark">✓</div>
-            <span id="heroNote">Residential and commercial plumbing services</span>
-          </div>
+          <div class="hero-note"><span></span><div id="hero-note">Residential and commercial plumbing services</div></div>
         </div>
-
-        <div class="hero-visual reveal">
-          <div class="hero-image-wrap">
-            <img id="heroImage" src="" alt="Professional plumbing work" hidden>
-          </div>
-
-          <div class="hero-floating">
-            <div class="floating-icon">✦</div>
-            <strong id="floatingTitle">Service you can rely on</strong>
-            <span id="floatingText">Professional solutions, clear communication.</span>
-          </div>
+        <div class="hero-visual">
+          <div class="hero-outline"></div>
+          <div class="hero-photo"><img id="hero-image" src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=1200&q=85" alt="Modern plumbing fixtures and tapware" onerror="this.style.display='none'"></div>
+          <div class="hero-tag"><div class="hero-tag-icon">⌁</div><div><strong id="hero-tag-title">Quality workmanship</strong><small id="hero-tag-text">Careful, professional service</small></div></div>
         </div>
-
       </div>
     </section>
 
-    <div class="trust-strip">
-      <div class="container trust-inner">
-        <div class="trust-item">
-          <div class="trust-icon">⌂</div>
-          <div>
-            <strong>Residential Plumbing</strong>
-            <span>Solutions for your home</span>
-          </div>
-        </div>
-
-        <div class="trust-item">
-          <div class="trust-icon">▦</div>
-          <div>
-            <strong>Commercial Plumbing</strong>
-            <span>Support for local businesses</span>
-          </div>
-        </div>
-
-        <div class="trust-item">
-          <div class="trust-icon">✓</div>
-          <div>
-            <strong>Clear Communication</strong>
-            <span>Know what to expect</span>
-          </div>
-        </div>
+    <section class="trust">
+      <div class="container trust-grid" id="trust-grid">
+        <div class="trust-item"><span class="trust-icon">⌂</span><div><strong>Residential</strong><small>Home plumbing</small></div></div>
+        <div class="trust-item"><span class="trust-icon">▦</span><div><strong>Commercial</strong><small>Business solutions</small></div></div>
+        <div class="trust-item"><span class="trust-icon">✓</span><div><strong>Quality focused</strong><small>Work done with care</small></div></div>
+        <div class="trust-item"><span class="trust-icon">⌖</span><div><strong>Local service</strong><small>Western Sydney</small></div></div>
       </div>
-    </div>
+    </section>
 
-    <section class="services-section" id="services">
+    <section class="services" id="services">
       <div class="container">
-
-        <div class="section-heading reveal">
-          <div class="section-kicker">What we do</div>
-          <h2 id="servicesTitle">Plumbing services for every property.</h2>
-          <p id="servicesDescription">
-            Practical plumbing solutions for homes, businesses and property managers.
-          </p>
+        <div class="services-top">
+          <div class="section-head reveal">
+            <span class="eyebrow">What we do</span>
+            <h2 id="services-title">Plumbing solutions for every space.</h2>
+            <p id="services-description">Practical, professional services to keep your property running smoothly.</p>
+          </div>
+          <a href="#contact" class="btn btn-primary">Discuss your project <span class="arrow">↗</span></a>
         </div>
-
-        <div class="services-grid" id="servicesGrid"></div>
-
+        <div class="services-grid" id="services-grid"></div>
       </div>
     </section>
 
-    <section id="about">
+    <section class="about" id="about">
       <div class="container about-grid">
-
         <div class="about-visual reveal">
-          <img id="aboutImage" src="" alt="Plumbing professional at work" hidden>
-          <div class="about-tag">
-            <strong id="aboutImageTitle">A better plumbing experience</strong>
-            <span id="aboutImageSubtitle">Professional service from start to finish</span>
-          </div>
+          <div class="about-main"><img id="about-image" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85" alt="Modern home interior with quality fixtures" onerror="this.style.display='none'"></div>
+          <div class="about-small"><img id="about-image-small" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=85" alt="Contemporary home interior" onerror="this.style.display='none'"></div>
         </div>
-
-        <div class="about-copy reveal">
-          <div class="section-kicker" id="aboutKicker">About our business</div>
-          <h2 id="aboutTitle">Good service starts with doing the job properly.</h2>
-          <p id="aboutDescription">
-            We believe plumbing should be straightforward. Our focus is on understanding the problem, explaining the options and delivering practical solutions.
-          </p>
-
-          <ul class="benefit-list" id="benefitList"></ul>
-
-          <a href="#contact" class="button button-primary">Talk to our team ↗</a>
+        <div class="about-content reveal">
+          <span class="eyebrow">The AquaFlow approach</span>
+          <h2 id="about-title">Good service starts with doing things properly.</h2>
+          <p id="about-description">We believe plumbing should be straightforward. That means listening to what you need, explaining the work clearly and taking care with every job.</p>
+          <div class="benefit-list" id="benefit-list"></div>
+          <a class="btn btn-primary" href="#contact">Talk to our team <span class="arrow">↗</span></a>
         </div>
-
       </div>
     </section>
 
-    <section class="areas-section" id="areas">
-      <div class="container areas-inner">
-
-        <div class="reveal">
-          <div class="section-kicker">Where we work</div>
-          <h2 id="areasTitle">Proud to service our local community.</h2>
-          <p id="areasDescription">
-            We provide plumbing services across selected Western Sydney suburbs. Contact us to check availability in your area.
-          </p>
-        </div>
-
-        <div class="areas-list reveal" id="areasList"></div>
-
-      </div>
-    </section>
-
-    <section class="process-section">
+    <section class="process">
       <div class="container">
-
-        <div class="section-heading reveal">
-          <div class="section-kicker">How it works</div>
-          <h2 id="processTitle">A straightforward process.</h2>
-          <p id="processDescription">Getting help with your plumbing should be simple. Here's how to get started.</p>
+        <div class="section-head reveal">
+          <span class="eyebrow">Simple process</span>
+          <h2 id="process-title">From first call to finished job.</h2>
+          <p id="process-description">A clear process keeps your project moving and helps you know what to expect.</p>
         </div>
-
-        <div class="process-grid" id="processGrid"></div>
-
+        <div class="process-grid" id="process-grid"></div>
       </div>
     </section>
 
-    <section class="contact-section" id="contact">
+    <section class="areas" id="areas">
+      <div class="container areas-inner">
+        <div>
+          <span class="eyebrow" style="color:#6edaf2">Where we work</span>
+          <h2 id="areas-title">Proud to serve<br>Western Sydney.</h2>
+          <p id="areas-description">Contact us to discuss a plumbing job in your area. We'll help you understand the next steps.</p>
+        </div>
+        <div class="area-pills" id="area-pills"></div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
       <div class="container contact-grid">
-
         <div class="contact-copy reveal">
-          <div class="section-kicker">Get in touch</div>
-          <h2 id="contactTitle">Let's talk about your plumbing needs.</h2>
-          <p id="contactDescription">
-            Tell us a little about what you need. Our team can get back to you to discuss the next steps.
-          </p>
-
-          <div class="contact-detail">
-            <div class="contact-detail-icon">☎</div>
-            <div>
-              <strong>Phone</strong>
-              <a id="contactPhone" href="tel:0400000000">0400 000 000</a>
-            </div>
-          </div>
-
-          <div class="contact-detail">
-            <div class="contact-detail-icon">✉</div>
-            <div>
-              <strong>Email</strong>
-              <a id="contactEmail" href="mailto:hello@example.com">hello@example.com</a>
-            </div>
-          </div>
-
-          <div class="contact-detail">
-            <div class="contact-detail-icon">⌖</div>
-            <div>
-              <strong>Service area</strong>
-              <span id="contactLocation">Western Sydney, NSW</span>
-            </div>
-          </div>
+          <span class="eyebrow">Let's talk plumbing</span>
+          <h2 id="contact-title">Tell us what you need.</h2>
+          <p id="contact-description">Have a repair, installation or project in mind? Send through an enquiry and the team can get back to you.</p>
+          <div class="contact-detail"><div class="contact-icon">☎</div><div><small>Call us</small><strong id="contact-phone">0400 000 000</strong></div></div>
+          <div class="contact-detail"><div class="contact-icon">✉</div><div><small>Email</small><strong id="contact-email">hello@example.com</strong></div></div>
+          <div class="contact-detail"><div class="contact-icon">⌖</div><div><small>Service area</small><strong id="contact-location">Western Sydney, NSW</strong></div></div>
         </div>
-
-        <form class="contact-form reveal" id="contactForm">
+        <form class="contact-form reveal" id="enquiry-form">
           <h3>Send an enquiry</h3>
-          <p class="form-subtitle">Fill in the details below and we'll be in touch.</p>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="customerName">Your name</label>
-              <input id="customerName" name="name" type="text" placeholder="Full name" required>
-            </div>
-
-            <div class="form-group">
-              <label for="customerPhone">Phone number</label>
-              <input id="customerPhone" name="phone" type="tel" placeholder="Your phone number" required>
-            </div>
+          <p>Fill in your details and let us know how we can help.</p>
+          <div class="form-grid">
+            <div class="field"><label for="name">Your name</label><input id="name" name="name" required placeholder="Full name"></div>
+            <div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" required type="tel" placeholder="Your phone"></div>
+            <div class="field full"><label for="email">Email address</label><input id="email" name="email" required type="email" placeholder="you@example.com"></div>
+            <div class="field full"><label for="service">What do you need help with?</label><select id="service" name="service"><option>General plumbing enquiry</option><option>Blocked drains</option><option>Leaking taps or pipes</option><option>Hot water</option><option>Bathroom plumbing</option><option>Commercial plumbing</option><option>Other</option></select></div>
+            <div class="field full"><label for="message">Tell us a little about the job</label><textarea id="message" name="message" placeholder="Describe what you need..."></textarea></div>
           </div>
-
-          <div class="form-group">
-            <label for="customerEmail">Email address</label>
-            <input id="customerEmail" name="email" type="email" placeholder="you@example.com" required>
-          </div>
-
-          <div class="form-group">
-            <label for="customerService">What do you need help with?</label>
-            <select id="customerService" name="service" required>
-              <option value="">Select a service</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="customerMessage">Tell us more</label>
-            <textarea id="customerMessage" name="message" placeholder="Describe what you need help with..." required></textarea>
-          </div>
-
-          <button type="submit" class="button button-primary">Prepare enquiry ↗</button>
-          <p class="form-message" id="formMessage">This demonstration form prepares an email. Connect a form service before using it for a real business.</p>
+          <button class="btn btn-primary form-submit" type="submit">Prepare enquiry <span class="arrow">↗</span></button>
+          <div class="form-note" id="form-note">This demo form opens your email app. Connect a form service before using it for a real business.</div>
         </form>
-
       </div>
     </section>
-
   </main>
 
-  <footer class="footer">
+  <footer>
     <div class="container">
-
-      <div class="footer-main">
-        <div class="footer-brand-column">
-          <a class="brand" href="#home">
-            <div class="brand-mark">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <path d="M12 2.5C9.5 6.3 5.8 10.1 5.8 14.5a6.2 6.2 0 0 0 12.4 0c0-4.4-3.7-8.2-6.2-12Z"/>
-                <path d="M9.3 15.1a2.9 2.9 0 0 0 2.9 2.9"/>
-              </svg>
-            </div>
-            <div class="brand-name">
-              <span id="footerBrandName">AquaFlow</span>
-              <span id="footerBrandDescriptor">Plumbing Services</span>
-            </div>
-          </a>
-
-          <p class="footer-description" id="footerDescription">
-            Dependable plumbing solutions for residential and commercial properties across Western Sydney.
-          </p>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="#home"><div class="brand-mark">A</div><div><div class="brand-name">Aqua<span>Flow</span></div><span class="brand-sub">Plumbing services</span></div></a>
+          <p id="footer-description">Practical plumbing solutions for homes and businesses across Western Sydney.</p>
         </div>
-
-        <div class="footer-column">
-          <h4>Explore</h4>
-          <a href="#home">Home</a>
-          <a href="#services">Our services</a>
-          <a href="#about">About us</a>
-          <a href="#areas">Service areas</a>
-        </div>
-
-        <div class="footer-column">
-          <h4>Contact</h4>
-          <a id="footerPhone" href="tel:0400000000">0400 000 000</a>
-          <a id="footerEmail" href="mailto:hello@example.com">hello@example.com</a>
-          <a href="#contact">Send an enquiry</a>
+        <div class="footer-links">
+          <div class="footer-col"><strong>Explore</strong><a href="#home">Home</a><a href="#services">Our services</a><a href="#about">About us</a><a href="#areas">Service areas</a></div>
+          <div class="footer-col"><strong>Get in touch</strong><a id="footer-phone" href="tel:0400000000">0400 000 000</a><a id="footer-email" href="mailto:hello@example.com">hello@example.com</a><a href="#contact">Send an enquiry</a></div>
         </div>
       </div>
-
-      <div class="footer-bottom">
-        <span id="copyrightText">© 2026 AquaFlow Plumbing. All rights reserved.</span>
-        <span id="footerLocation">Western Sydney, NSW</span>
-      </div>
-
+      <div class="footer-bottom"><span id="copyright">© 2026 AquaFlow Plumbing. All rights reserved.</span><span>Website concept and design</span></div>
     </div>
   </footer>
 
   <script>
-    const CONTENT_URL = "./content/site.json";
-
-    const fallbackContent = {
-      business: {
-        name: "AquaFlow",
-        descriptor: "Plumbing Services",
-        phone: "0400 000 000",
-        email: "hello@example.com",
-        location: "Western Sydney, NSW",
-        announcement: "Reliable plumbing support across Western Sydney"
-      },
-      hero: {
-        eyebrow: "Your local plumbing specialists",
-        title: "Plumbing done right.",
-        highlight: "Every time.",
-        description: "From everyday plumbing repairs to larger installations, get dependable service and practical solutions for your home or business.",
-        note: "Residential and commercial plumbing services",
-        floatingTitle: "Service you can rely on",
-        floatingText: "Professional solutions, clear communication.",
-        image: ""
-      },
-      services: {
-        title: "Plumbing services for every property.",
-        description: "Practical plumbing solutions for homes, businesses and property managers.",
-        items: []
-      },
-      about: {
-        kicker: "About our business",
-        title: "Good service starts with doing the job properly.",
-        description: "We believe plumbing should be straightforward. Our focus is on understanding the problem, explaining the options and delivering practical solutions.",
-        image: "",
-        imageTitle: "A better plumbing experience",
-        imageSubtitle: "Professional service from start to finish",
-        benefits: []
-      },
-      areas: {
-        title: "Proud to service our local community.",
-        description: "We provide plumbing services across selected Western Sydney suburbs. Contact us to check availability in your area.",
-        items: []
-      },
-      process: {
-        title: "A straightforward process.",
-        description: "Getting help with your plumbing should be simple. Here's how to get started.",
-        items: []
-      },
-      contact: {
-        title: "Let's talk about your plumbing needs.",
-        description: "Tell us a little about what you need. Our team can get back to you to discuss the next steps."
-      }
+    const fallback = {
+      business: { name: "AquaFlow Plumbing", phone: "0400 000 000", email: "hello@example.com", location: "Western Sydney, NSW", topbar: "Professional plumbing across Western Sydney", hours: "Enquiries welcome" },
+      hero: { eyebrow: "Your local plumbing team", title: "Plumbing done right. Every time.", description: "Dependable plumbing solutions for homes and businesses. From everyday repairs to bigger installations, get in touch with a team that puts quality first.", button: "Get a free quote", note: "Residential and commercial plumbing services", tagTitle: "Quality workmanship", tagText: "Careful, professional service", image: "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=1200&q=85" },
+      servicesSection: { title: "Plumbing solutions for every space.", description: "Practical, professional services to keep your property running smoothly." },
+      services: [
+        { title: "Blocked drains", description: "Help with drainage issues, slow-flowing sinks and blocked pipes around your property.", image: "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=800&q=85" },
+        { title: "Leaks and repairs", description: "Find and address common plumbing leaks, dripping taps and pipework problems.", image: "https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=800&q=85" },
+        { title: "Hot water systems", description: "Enquire about hot water repairs, replacement options and new installations.", image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=85" },
+        { title: "Bathroom plumbing", description: "Plumbing work for bathroom upgrades, renovations and new fixtures.", image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=85" },
+        { title: "Kitchen plumbing", description: "Practical plumbing for kitchen sinks, taps, fixtures and appliance connections.", image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=85" },
+        { title: "Commercial plumbing", description: "Plumbing enquiries for offices, retail spaces and other commercial properties.", image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=85" }
+      ],
+      about: { title: "Good service starts with doing things properly.", description: "We believe plumbing should be straightforward. That means listening to what you need, explaining the work clearly and taking care with every job.", image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85", smallImage: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=85" },
+      benefits: ["Clear communication", "Careful workmanship", "Residential and commercial", "Local service focus"],
+      processSection: { title: "From first call to finished job.", description: "A clear process keeps your project moving and helps you know what to expect." },
+      process: [
+        { title: "Tell us what you need", description: "Send an enquiry with a few details about your plumbing job." },
+        { title: "Discuss the details", description: "We'll discuss the issue, your property and the next steps." },
+        { title: "Plan the work", description: "Confirm the scope, timing and details before work begins." },
+        { title: "Get it sorted", description: "The agreed work is completed with care and attention." }
+      ],
+      areasSection: { title: "Proud to serve Western Sydney.", description: "Contact us to discuss a plumbing job in your area. We'll help you understand the next steps." },
+      areas: ["Marsden Park", "Schofields", "Rouse Hill", "Blacktown", "Riverstone", "The Ponds", "Quakers Hill", "Nearby suburbs"],
+      contact: { title: "Tell us what you need.", description: "Have a repair, installation or project in mind? Send through an enquiry and the team can get back to you." }
     };
 
-    function setText(id, value) {
-      const element = document.getElementById(id);
-      if (element && value !== undefined && value !== null) {
-        element.textContent = value;
-      }
+    const $ = id => document.getElementById(id);
+    const safe = value => String(value ?? "").replace(/[&<>"']/g, char => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[char]));
+    const setText = (id, value) => { if (value !== undefined && value !== null) $(id).textContent = value; };
+    const setImage = (id, url, alt) => { if (url) { $(id).src = url; $(id).alt = alt || ""; $(id).style.display = "block"; } };
+
+    function render(data) {
+      const d = { ...fallback, ...data };
+      d.business = { ...fallback.business, ...(data.business || {}) };
+      d.hero = { ...fallback.hero, ...(data.hero || {}) };
+      d.servicesSection = { ...fallback.servicesSection, ...(data.servicesSection || {}) };
+      d.about = { ...fallback.about, ...(data.about || {}) };
+      d.processSection = { ...fallback.processSection, ...(data.processSection || {}) };
+      d.areasSection = { ...fallback.areasSection, ...(data.areasSection || {}) };
+      d.contact = { ...fallback.contact, ...(data.contact || {}) };
+
+      const phone = d.business.phone;
+      const email = d.business.email;
+      const phoneLink = "tel:" + String(phone).replace(/[^\d+]/g, "");
+      setText("topbar-message", d.business.topbar);
+      setText("topbar-hours", d.business.hours);
+      setText("topbar-area", d.business.location);
+      setText("brand-name", d.business.name);
+      setText("nav-phone", phone);
+      $("nav-phone").href = phoneLink;
+      setText("hero-eyebrow", d.hero.eyebrow);
+      $("hero-title").innerHTML = safe(d.hero.title).replace(/\.\s/, ".<br><span>").replace(/$/, "</span>");
+      setText("hero-description", d.hero.description);
+      setText("hero-button", d.hero.button + " ↗");
+      setText("hero-note", d.hero.note);
+      setText("hero-tag-title", d.hero.tagTitle);
+      setText("hero-tag-text", d.hero.tagText);
+      $("hero-phone-button").href = phoneLink;
+      setImage("hero-image", d.hero.image, "Plumbing fixtures");
+      setText("services-title", d.servicesSection.title);
+      setText("services-description", d.servicesSection.description);
+
+      const services = Array.isArray(d.services) ? d.services : fallback.services;
+      $("services-grid").innerHTML = services.map((s, i) => `
+        <article class="service-card reveal">
+          <div class="service-image"><img src="${safe(s.image)}" alt="${safe(s.title)}" loading="lazy" onerror="this.style.display='none'"></div>
+          <div class="service-content"><span class="service-number">SERVICE 0${i + 1}</span><h3>${safe(s.title)}</h3><p>${safe(s.description)}</p><a class="service-link" href="#contact">Enquire about this <span>↗</span></a></div>
+        </article>`).join("");
+
+      setText("about-title", d.about.title);
+      setText("about-description", d.about.description);
+      setImage("about-image", d.about.image, "Modern interior");
+      setImage("about-image-small", d.about.smallImage, "Contemporary interior");
+      $("benefit-list").innerHTML = (d.benefits || fallback.benefits).map(item => `<div class="benefit"><span class="check">✓</span><span>${safe(item)}</span></div>`).join("");
+
+      setText("process-title", d.processSection.title);
+      setText("process-description", d.processSection.description);
+      $("process-grid").innerHTML = (d.process || fallback.process).map((item, i) => `<article class="process-card reveal"><div class="process-no">0${i + 1}</div><h3>${safe(item.title)}</h3><p>${safe(item.description)}</p></article>`).join("");
+
+      setText("areas-title", d.areasSection.title);
+      setText("areas-description", d.areasSection.description);
+      $("area-pills").innerHTML = (d.areas || fallback.areas).map(area => `<span class="area-pill">${safe(area)}</span>`).join("");
+
+      setText("contact-title", d.contact.title);
+      setText("contact-description", d.contact.description);
+      setText("contact-phone", phone);
+      setText("contact-email", email);
+      setText("contact-location", d.business.location);
+      $("footer-phone").textContent = phone;
+      $("footer-phone").href = phoneLink;
+      $("footer-email").textContent = email;
+      $("footer-email").href = "mailto:" + email;
+      setText("footer-description", d.business.name + " provides plumbing services across " + d.business.location + ".");
+      setText("copyright", "© " + new Date().getFullYear() + " " + d.business.name + ". All rights reserved.");
+      document.title = d.business.name + " | " + d.business.location;
+      document.querySelector('meta[name="description"]').content = d.hero.description;
+      document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
     }
 
-    function setImage(id, source) {
-      const image = document.getElementById(id);
-      if (!image || !source) return;
-
-      image.src = source;
-      image.hidden = false;
-
-      image.onerror = () => {
-        image.hidden = true;
-      };
-    }
-
-    function setPhone(id, phone) {
-      const element = document.getElementById(id);
-      if (!element || !phone) return;
-
-      element.textContent = phone;
-      element.href = "tel:" + phone.replace(/[^\d+]/g, "");
-    }
-
-    function setEmail(id, email) {
-      const element = document.getElementById(id);
-      if (!element || !email) return;
-
-      element.textContent = email;
-      element.href = "mailto:" + email;
-    }
-
-    function renderServices(items) {
-      const grid = document.getElementById("servicesGrid");
-      const select = document.getElementById("customerService");
-
-      grid.innerHTML = "";
-      select.innerHTML = '<option value="">Select a service</option>';
-
-      (items || []).forEach((service, index) => {
-        const card = document.createElement("article");
-        card.className = "service-card reveal";
-
-        const icon = document.createElement("div");
-        icon.className = "service-icon";
-        icon.textContent = service.icon || "✦";
-
-        const heading = document.createElement("h3");
-        heading.textContent = service.title || "Plumbing service";
-
-        const description = document.createElement("p");
-        description.textContent = service.description || "";
-
-        const number = document.createElement("span");
-        number.className = "service-number";
-        number.textContent = String(index + 1).padStart(2, "0") + " / SERVICE";
-
-        card.append(icon, heading, description, number);
-        grid.appendChild(card);
-
-        const option = document.createElement("option");
-        option.value = service.title || "General enquiry";
-        option.textContent = service.title || "General enquiry";
-        select.appendChild(option);
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
       });
+    }, { threshold: 0.12 });
 
-      observeReveals();
-    }
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+    $("menu-toggle").addEventListener("click", () => $("nav-links").classList.toggle("open"));
+    document.querySelectorAll("#nav-links a").forEach(link => link.addEventListener("click", () => $("nav-links").classList.remove("open")));
 
-    function renderBenefits(items) {
-      const list = document.getElementById("benefitList");
-      list.innerHTML = "";
-
-      (items || []).forEach(item => {
-        const li = document.createElement("li");
-
-        const check = document.createElement("span");
-        check.className = "check";
-        check.textContent = "✓";
-
-        const text = document.createElement("span");
-        text.textContent = item.text || "";
-
-        li.append(check, text);
-        list.appendChild(li);
-      });
-    }
-
-    function renderAreas(items) {
-      const list = document.getElementById("areasList");
-      list.innerHTML = "";
-
-      (items || []).forEach(item => {
-        const pill = document.createElement("span");
-        pill.className = "area-pill";
-        pill.textContent = item.name || item;
-        list.appendChild(pill);
-      });
-    }
-
-    function renderProcess(items) {
-      const grid = document.getElementById("processGrid");
-      grid.innerHTML = "";
-
-      (items || []).forEach((item, index) => {
-        const card = document.createElement("article");
-        card.className = "process-card reveal";
-
-        const number = document.createElement("div");
-        number.className = "process-number";
-        number.textContent = String(index + 1).padStart(2, "0");
-
-        const heading = document.createElement("h3");
-        heading.textContent = item.title || "";
-
-        const description = document.createElement("p");
-        description.textContent = item.description || "";
-
-        card.append(number, heading, description);
-        grid.appendChild(card);
-      });
-
-      observeReveals();
-    }
-
-    function applyContent(data) {
-      const business = data.business || {};
-      const hero = data.hero || {};
-      const services = data.services || {};
-      const about = data.about || {};
-      const areas = data.areas || {};
-      const process = data.process || {};
-      const contact = data.contact || {};
-
-      setText("brandName", business.name);
-      setText("footerBrandName", business.name);
-      setText("brandDescriptor", business.descriptor);
-      setText("footerBrandDescriptor", business.descriptor);
-      setText("announcementText", business.announcement);
-      setText("footerLocation", business.location);
-      setText("contactLocation", business.location);
-
-      setPhone("topPhone", business.phone);
-      setPhone("navCall", business.phone);
-      setPhone("heroPhone", business.phone);
-      setPhone("contactPhone", business.phone);
-      setPhone("footerPhone", business.phone);
-
-      setEmail("contactEmail", business.email);
-      setEmail("footerEmail", business.email);
-
-      setText("heroEyebrow", hero.eyebrow);
-      setText("heroNote", hero.note);
-      setText("floatingTitle", hero.floatingTitle);
-      setText("floatingText", hero.floatingText);
-
-      const heroTitle = document.getElementById("heroTitle");
-      heroTitle.replaceChildren();
-
-      const titleText = document.createTextNode((hero.title || "Plumbing done right.") + " ");
-      const highlight = document.createElement("span");
-      highlight.textContent = hero.highlight || "Every time.";
-      heroTitle.append(titleText, highlight);
-
-      setText("heroDescription", hero.description);
-      setImage("heroImage", hero.image);
-
-      setText("servicesTitle", services.title);
-      setText("servicesDescription", services.description);
-      renderServices(services.items);
-
-      setText("aboutKicker", about.kicker);
-      setText("aboutTitle", about.title);
-      setText("aboutDescription", about.description);
-      setText("aboutImageTitle", about.imageTitle);
-      setText("aboutImageSubtitle", about.imageSubtitle);
-      setImage("aboutImage", about.image);
-      renderBenefits(about.benefits);
-
-      setText("areasTitle", areas.title);
-      setText("areasDescription", areas.description);
-      renderAreas(areas.items);
-
-      setText("processTitle", process.title);
-      setText("processDescription", process.description);
-      renderProcess(process.items);
-
-      setText("contactTitle", contact.title);
-      setText("contactDescription", contact.description);
-
-      setText("footerDescription", business.footerDescription);
-      setText("copyrightText", "© " + new Date().getFullYear() + " " + (business.name || "AquaFlow") + " " + (business.descriptor || "Plumbing Services") + ". All rights reserved.");
-    }
-
-    async function loadContent() {
-      try {
-        const response = await fetch(CONTENT_URL + "?v=" + Date.now(), {
-          cache: "no-store"
-        });
-
-        if (!response.ok) throw new Error("Content file could not be loaded");
-
-        const data = await response.json();
-        applyContent(data);
-      } catch (error) {
-        console.warn("Using website fallback content:", error);
-        applyContent(fallbackContent);
-      }
-
-      observeReveals();
-    }
-
-    function observeReveals() {
-      const elements = document.querySelectorAll(".reveal:not(.visible)");
-
-      if (!("IntersectionObserver" in window)) {
-        elements.forEach(element => element.classList.add("visible"));
-        return;
-      }
-
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      }, {
-        threshold: 0.12,
-        rootMargin: "0px 0px -35px 0px"
-      });
-
-      elements.forEach(element => observer.observe(element));
-    }
-
-    const menuToggle = document.getElementById("menuToggle");
-    const navLinks = document.getElementById("navLinks");
-
-    menuToggle.addEventListener("click", () => {
-      const isOpen = navLinks.classList.toggle("open");
-      menuToggle.setAttribute("aria-expanded", String(isOpen));
-    });
-
-    navLinks.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("open");
-        menuToggle.setAttribute("aria-expanded", "false");
-      });
-    });
-
-    document.getElementById("contactForm").addEventListener("submit", event => {
+    $("enquiry-form").addEventListener("submit", event => {
       event.preventDefault();
-
       const form = new FormData(event.currentTarget);
-      const data = Object.fromEntries(form.entries());
-
-      const email = document.getElementById("contactEmail").textContent.trim();
-
-      if (!email || email === "hello@example.com") {
-        document.getElementById("formMessage").textContent =
-          "Please configure the business email address before using this demo form.";
-        return;
-      }
-
-      const subject = encodeURIComponent("Website enquiry - " + data.service);
+      const subject = encodeURIComponent("Website enquiry - " + form.get("service"));
       const body = encodeURIComponent(
-        "Name: " + data.name + "\n" +
-        "Phone: " + data.phone + "\n" +
-        "Email: " + data.email + "\n" +
-        "Service: " + data.service + "\n\n" +
-        "Message:\n" + data.message
+        "Name: " + form.get("name") + "\nPhone: " + form.get("phone") +
+        "\nEmail: " + form.get("email") + "\nService: " + form.get("service") +
+        "\n\nMessage:\n" + form.get("message")
       );
-
+      const email = window.siteEmail || "hello@example.com";
       window.location.href = "mailto:" + email + "?subject=" + subject + "&body=" + body;
-
-      document.getElementById("formMessage").textContent =
-        "Your email application should open with the enquiry prepared.";
     });
 
-    loadContent();
+    fetch("./content/site.json?v=" + Date.now(), { cache: "no-store" })
+      .then(response => { if (!response.ok) throw new Error("Content file not found"); return response.json(); })
+      .then(data => {
+        window.siteEmail = data.business?.email || fallback.business.email;
+        render(data);
+      })
+      .catch(error => {
+        console.warn("Using built-in demo content:", error);
+        window.siteEmail = fallback.business.email;
+        render(fallback);
+      });
   </script>
-
 </body>
 </html>
