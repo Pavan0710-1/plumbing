@@ -1,65 +1,131 @@
 {
-  "hero": {
-    "eyebrow": "LANDSCAPE DESIGN · WESTERN SYDNEY",
-    "title": "Outdoor spaces.<br><em>Thoughtfully created.</em>",
-    "description": "We create beautiful, functional outdoor spaces designed around the way you live, relax and help to support.",
-    "button": "Start your project ↗",
-    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85"
+  "business": {
+    "name": "AquaFlow",
+    "descriptor": "Plumbing Services",
+    "phone": "0400 000 000",
+    "email": "hello@example.com",
+    "location": "Western Sydney, NSW",
+    "announcement": "Reliable plumbing support across Western Sydney",
+    "footerDescription": "Dependable plumbing solutions for residential and commercial properties across Western Sydney."
   },
-  "intro": {
-    "title": "Bring your outdoor vision <em>to life.</em>",
-    "description": "From the first idea to the final detail, we approach every outdoor space with care, creativity and attention to detail.",
-    "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=85"
+  "hero": {
+    "eyebrow": "Your local plumbing specialists",
+    "title": "Plumbing done right.",
+    "highlight": "Every time.",
+    "description": "From everyday plumbing repairs to larger installations, get dependable service and practical solutions for your home or business.",
+    "note": "Residential and commercial plumbing services",
+    "floatingTitle": "Service you can rely on",
+    "floatingText": "Professional solutions, clear communication.",
+    "image": ""
   },
   "services": {
-    "title": "Spaces made for <em>living.</em>",
-    "description": "Thoughtful landscaping services that bring together design, practicality and lasting quality.",
+    "title": "Plumbing services for every property.",
+    "description": "Practical plumbing solutions for homes, businesses and property managers.",
     "items": [
       {
-        "title": "Landscape Design",
-        "description": "Thoughtful garden layouts and outdoor concepts designed around your space.",
-        "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=900&q=85"
+        "icon": "⌁",
+        "title": "General Plumbing",
+        "description": "Everyday plumbing repairs, maintenance and installations to keep your property's plumbing working properly."
       },
       {
-        "title": "Garden Construction",
-        "description": "Bring your outdoor vision to life with considered landscaping and planting.",
-        "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=85"
+        "icon": "◉",
+        "title": "Blocked Drains",
+        "description": "Assistance with blocked drains and drainage problems, with practical solutions to get things flowing again."
       },
       {
-        "title": "Outdoor Living",
-        "description": "Create welcoming spaces for relaxing, entertaining and everyday living.",
-        "image": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85"
-      }
-    ]
-  },
-  "projects": {
-    "title": "A closer look at <em>our work.</em>",
-    "description": "A selection of outdoor spaces and landscaping concepts.",
-    "items": [
-      {
-        "title": "Contemporary Retreat",
-        "category": "Outdoor Living",
-        "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85"
+        "icon": "♨",
+        "title": "Hot Water Systems",
+        "description": "Hot water system servicing, repairs and installation options for residential and commercial properties."
       },
       {
-        "title": "Garden Sanctuary",
-        "category": "Garden Design",
-        "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1200&q=85"
+        "icon": "⌂",
+        "title": "Bathroom Plumbing",
+        "description": "Plumbing solutions for bathroom renovations, fixtures, taps, showers and other bathroom upgrades."
+      },
+      {
+        "icon": "▤",
+        "title": "Leak Detection",
+        "description": "Help identifying plumbing leaks and assessing the right repair options for your property."
+      },
+      {
+        "icon": "▦",
+        "title": "Commercial Plumbing",
+        "description": "Plumbing maintenance and installation services for commercial spaces and local businesses."
       }
     ]
   },
   "about": {
-    "title": "Designed with purpose. <em>Built to enjoy.</em>",
-    "description": "VERDANT is focused on creating outdoor environments that feel considered, welcoming and connected to their surroundings.",
-    "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1100&q=85"
+    "kicker": "About our business",
+    "title": "Good service starts with doing the job properly.",
+    "description": "We believe plumbing should be straightforward. Our focus is on understanding the problem, explaining the options and delivering practical solutions for every property.",
+    "image": "",
+    "imageTitle": "A better plumbing experience",
+    "imageSubtitle": "Professional service from start to finish",
+    "benefits": [
+      {
+        "text": "Clear communication from the first enquiry"
+      },
+      {
+        "text": "Practical solutions for your property"
+      },
+      {
+        "text": "Residential and commercial service options"
+      },
+      {
+        "text": "A focus on quality workmanship"
+      }
+    ]
+  },
+  "areas": {
+    "title": "Proud to service our local community.",
+    "description": "We provide plumbing services across selected Western Sydney suburbs. Contact us to check availability in your area.",
+    "items": [
+      {
+        "name": "Marsden Park"
+      },
+      {
+        "name": "Blacktown"
+      },
+      {
+        "name": "Rouse Hill"
+      },
+      {
+        "name": "Schofields"
+      },
+      {
+        "name": "Riverstone"
+      },
+      {
+        "name": "The Ponds"
+      },
+      {
+        "name": "Quakers Hill"
+      },
+      {
+        "name": "Kellyville"
+      }
+    ]
+  },
+  "process": {
+    "title": "A straightforward process.",
+    "description": "Getting help with your plumbing should be simple. Here's how to get started.",
+    "items": [
+      {
+        "title": "Get in touch",
+        "description": "Tell us about your plumbing issue or project using the enquiry form or by phone."
+      },
+      {
+        "title": "Discuss your needs",
+        "description": "We discuss the details, understand what you need and explain the next steps."
+      },
+      {
+        "title": "Arrange the service",
+        "description": "Once the details are confirmed, arrange a suitable time for the work."
+      }
+    ]
   },
   "contact": {
-    "title": "Let's create something <em>special.</em>",
-    "description": "Have an outdoor project in mind? Tell us a little about it and we'll be in touch."
-  },
-  "business": {
-    "email": "demo@email.com",
-    "phone": "00000000000",
-    "location": "Western Sydney, NSW"
+    "title": "Let's talk about your plumbing needs.",
+    "description": "Tell us a little about what you need. Our team can get back to you to discuss the next steps."
   }
 }

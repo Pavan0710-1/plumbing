@@ -1,84 +1,244 @@
-
 media:
   - name: images
     label: Website Images
     input: media
     output: /media
+    categories:
+      - image
+    extensions:
+      - jpg
+      - jpeg
+      - png
+      - webp
+    rename: safe
 
 content:
   - name: website
     label: Website Content
-    type: file
-    path: content/site.json
-    format: json
-    fields:
-      - name: hero
-        label: Homepage Hero
-        type: object
-        fields:
-          - { name: eyebrow, label: Small Heading, type: string }
-          - { name: title, label: Main Heading, type: text }
-          - { name: description, label: Description, type: text }
-          - { name: button, label: Button Text, type: string }
-          - { name: image, label: Background Image URL, type: string }
-
-      - name: intro
-        label: Introduction
-        type: object
-        fields:
-          - { name: title, label: Heading, type: text }
-          - { name: description, label: Description, type: text }
-          - { name: image, label: Image URL, type: string }
-
-      - name: services
-        label: Services Section
-        type: object
-        fields:
-          - { name: title, label: Heading, type: text }
-          - { name: description, label: Description, type: text }
-          - name: items
-            label: Services
-            type: object
-            list: true
-            fields:
-              - { name: title, label: Service Name, type: string }
-              - { name: description, label: Description, type: text }
-              - { name: image, label: Image URL, type: string }
-
-      - name: projects
-        label: Projects Section
-        type: object
-        fields:
-          - { name: title, label: Heading, type: text }
-          - { name: description, label: Description, type: text }
-          - name: items
-            label: Projects
-            type: object
-            list: true
-            fields:
-              - { name: title, label: Project Name, type: string }
-              - { name: category, label: Category, type: string }
-              - { name: image, label: Image URL, type: string }
-
-      - name: about
-        label: About Section
-        type: object
-        fields:
-          - { name: title, label: Heading, type: text }
-          - { name: description, label: Description, type: text }
-          - { name: image, label: Image URL, type: string }
-
-      - name: contact
-        label: Contact Section
-        type: object
-        fields:
-          - { name: title, label: Heading, type: text }
-          - { name: description, label: Description, type: text }
+    type: group
+    items:
 
       - name: business
         label: Business Details
-        type: object
+        type: file
+        path: content/site.json
+        format: json
         fields:
-          - { name: email, label: Email Address, type: string }
-          - { name: phone, label: Phone Number, type: string }
-          - { name: location, label: Location, type: string }
+
+          - name: business
+            label: Business Information
+            type: object
+            fields:
+              - name: name
+                label: Business Name
+                type: string
+
+              - name: descriptor
+                label: Business Type
+                type: string
+
+              - name: phone
+                label: Phone Number
+                type: string
+
+              - name: email
+                label: Business Email
+                type: string
+
+              - name: location
+                label: Main Service Location
+                type: string
+
+              - name: announcement
+                label: Top Announcement
+                type: string
+
+              - name: footerDescription
+                label: Footer Description
+                type: text
+
+          - name: hero
+            label: Homepage
+            type: object
+            fields:
+              - name: eyebrow
+                label: Small Heading
+                type: string
+
+              - name: title
+                label: Main Heading
+                type: string
+
+              - name: highlight
+                label: Highlighted Heading
+                type: string
+
+              - name: description
+                label: Homepage Description
+                type: text
+
+              - name: note
+                label: Short Supporting Text
+                type: string
+
+              - name: floatingTitle
+                label: Image Card Heading
+                type: string
+
+              - name: floatingText
+                label: Image Card Description
+                type: string
+
+              - name: image
+                label: Homepage Image
+                type: image
+                options:
+                  media: images
+                  path: /
+
+          - name: services
+            label: Services Section
+            type: object
+            fields:
+              - name: title
+                label: Services Heading
+                type: string
+
+              - name: description
+                label: Services Introduction
+                type: text
+
+              - name: items
+                label: Individual Services
+                type: object
+                list:
+                  min: 1
+                  max: 12
+                  collapsible:
+                    collapsed: true
+                    summary: "{title}"
+                fields:
+                  - name: icon
+                    label: Small Icon
+                    type: string
+
+                  - name: title
+                    label: Service Name
+                    type: string
+
+                  - name: description
+                    label: Service Description
+                    type: text
+
+          - name: about
+            label: About Section
+            type: object
+            fields:
+              - name: kicker
+                label: Small Heading
+                type: string
+
+              - name: title
+                label: Main Heading
+                type: string
+
+              - name: description
+                label: About Description
+                type: text
+
+              - name: image
+                label: About Image
+                type: image
+                options:
+                  media: images
+                  path: /
+
+              - name: imageTitle
+                label: Image Card Heading
+                type: string
+
+              - name: imageSubtitle
+                label: Image Card Description
+                type: string
+
+              - name: benefits
+                label: Business Benefits
+                type: object
+                list:
+                  min: 1
+                  max: 8
+                  collapsible:
+                    collapsed: true
+                    summary: "{text}"
+                fields:
+                  - name: text
+                    label: Benefit
+                    type: string
+
+          - name: areas
+            label: Service Areas
+            type: object
+            fields:
+              - name: title
+                label: Section Heading
+                type: string
+
+              - name: description
+                label: Section Description
+                type: text
+
+              - name: items
+                label: Suburbs
+                type: object
+                list:
+                  min: 1
+                  max: 30
+                  collapsible:
+                    collapsed: true
+                    summary: "{name}"
+                fields:
+                  - name: name
+                    label: Suburb Name
+                    type: string
+
+          - name: process
+            label: How It Works
+            type: object
+            fields:
+              - name: title
+                label: Section Heading
+                type: string
+
+              - name: description
+                label: Section Description
+                type: text
+
+              - name: items
+                label: Process Steps
+                type: object
+                list:
+                  min: 1
+                  max: 6
+                  collapsible:
+                    collapsed: true
+                    summary: "{title}"
+                fields:
+                  - name: title
+                    label: Step Heading
+                    type: string
+
+                  - name: description
+                    label: Step Description
+                    type: text
+
+          - name: contact
+            label: Contact Section
+            type: object
+            fields:
+              - name: title
+                label: Contact Heading
+                type: string
+
+              - name: description
+                label: Contact Description
+                type: text
